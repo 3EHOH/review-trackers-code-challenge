@@ -1,0 +1,28 @@
+.accepted {
+    background-color: #9AFE2E;
+}
+
+.delivered {
+    background-color: #819FF7;
+}
+
+.finished {
+    background-color: #BDBDBD;
+}
+
+.started {
+    background-color: #2E9AFE;
+}
+
+.unscheduled {
+    background-color: #F6CED8;
+}
+
+.unstarted {
+    background-color: #F5A9A9;
+}
+
+.muted {
+    color: #6a737d;
+}
+

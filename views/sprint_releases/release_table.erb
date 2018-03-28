@@ -1,0 +1,47 @@
+<h1>Release: <% @release_label %></h1>
+<h4 class="muted">Can't wait to see those new features.</h4>
+
+<table class="table">
+  <thead>
+  <th>Owners</th>
+  <th>Points</th>
+  <th>Story Type</th>
+  <th>Name</th>
+  <th>Current State</th>
+  <th>Project ID</th>
+  </thead>
+  <tbody>
+  <% @stories.each do |key| %>
+    <tr>
+      <td>
+        <% if key['owner_ids'] == [] %>
+          No Owner
+        <%  else %>
+          <% key['owners_names'].each do |owner| %>
+            <a href="/product_owners/<%= owner %>"> <%= owner %> </a>
+          <% end %>
+        <% end %>
+      </td>
+      <td>
+        <%= key['estimate'].nil? ? "No Estimate" : key['estimate'] %>
+      </td>
+      <td>
+        <%= key['story_type'] %>
+      </td>
+      <td>
+        <%= key['name'] %>
+      </td>
+      <td class="<%= key['current_state'] %>">
+        <%= key['current_state'] %>
+      </td>
+      <td>
+        <%= key['project_id'] %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<div>
+  <a href=""<%= base_url + '/update_sprint' %>" class="btn btn-info" role="button">Update Sprint</a>
+</div>

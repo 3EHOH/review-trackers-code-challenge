@@ -1,0 +1,35 @@
+<h1>Edit A P.O. For Some Reason</h1>
+
+<form method="PUT" action="/product_owners/<%= @product_owner['poid'] %>">
+
+  <div class="form-group">
+
+    <label>ID:</label>
+    <input type="text" name="poid" class="form-control" value="<%= @product_owner['id'] %>" disabled>
+
+  </div>
+
+  <div class="form-group">
+
+    <label>Product Owner ID:</label>
+    <input type="text" name="poid" class="form-control" value="<%= @product_owner['poid'] %>">
+
+  </div>
+
+  <div class="form-group">
+
+    <label>Name:</label>
+    <input type="text" name="name" class="form-control" value="<%= @product_owner['name'] %>">
+
+  </div>
+
+  <div class="form-group">
+
+    <label>Initials:</label>
+    <input type="text" name="initials" class="form-control" value="<%= @product_owner['initials'] %>">
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>

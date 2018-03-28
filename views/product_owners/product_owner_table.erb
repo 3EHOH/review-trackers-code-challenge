@@ -1,0 +1,50 @@
+<h1> Product Owners' Table </h1>
+<h4 class="muted">The smoke-filled room of product owners.</h4>
+
+<table class="table">
+
+  <thead>
+  <th>id</th>
+  <th>poid</th>
+  <th>name</th>
+  <th>initials</th>
+  <th>created at</th>
+  <th>updated at</th>
+  <th>edit</th>
+  <th>delete</th>
+  </thead>
+
+  <tbody>
+  <% @owners.each do |owner| %>
+    <tr>
+      <td>
+       <%= owner.id %>
+      </td>
+      <td>
+        <%= owner.poid %>
+      </td>
+      <td>
+       <%= owner.name %>
+      </td>
+      <td>
+        <%= owner.initials %>
+      </td>
+      <td>
+        <%= owner.created_at %>
+      </td>
+      <td>
+        <%= owner.updated_at %>
+      </td>
+      <td>
+        <a class="btn btn-warning" href="/product_owners_form_update/<%= owner.poid %>" role="button">Edit</a>
+      </td>
+      <td>
+        <a class="btn btn-danger" href="/product_owners/<%= owner.poid %>/delete" role="button" value="delete">Delete</a>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<div>
+  <a class="btn btn-primary" href="/product_owners_form_create" role="button">Create a P.O.</a>
+</div>
