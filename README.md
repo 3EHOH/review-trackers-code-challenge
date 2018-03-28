@@ -18,8 +18,8 @@
 ## Additional Info:
 
 ### [Pivotal login](https://www.pivotaltracker.com/signin):
-- user: `nate+test1@reviewtrackers.com`
-- pw: `Password1!`
+- user: <user>
+- pw: <password>
 
 
 ## ADDED INSTRUCTIONS TO SETUP:
